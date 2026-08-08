@@ -15,35 +15,40 @@
       <ion-card-title>My Tasks</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <div class="add-task-button">
+        <ion-button color="primary">
+          + Add Task
+        </ion-button>
+      </div>
       <table>
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
 
-    <tbody>
-      <tr>
-        <td>Learn Angular</td>
-        <td>Pending</td>
-        <td>
-          <ion-button>Edit</ion-button>
-          <ion-button color="danger">Delete</ion-button>
-        </td>
-      </tr>
+        <tbody>
+          <tr>
+            <td>Learn Angular</td>
+            <td>Pending</td>
+            <td>
+              <ion-button>Edit</ion-button>
+              <ion-button color="danger">Delete</ion-button>
+            </td>
+          </tr>
 
-      <tr>
-        <td>Learn Ionic</td>
-        <td>Completed</td>
-        <td>
-          <ion-button>Edit</ion-button>
-          <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <tr>
+            <td>Learn Ionic</td>
+            <td>Completed</td>
+            <td>
+              <ion-button>Edit</ion-button>
+              <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </ion-card-content>
   </ion-card>
 </ion-content>
