@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/inbox',
+    redirectTo: 'tasks',
     pathMatch: 'full',
   },
   {
@@ -14,5 +14,9 @@ export const routes: Routes = [
   {
     path: 'tasks',
     loadComponent: () => import('./tasks/tasks.page').then( m => m.TasksPage)
+  },
+  {
+    path: 'updated-tasks',
+    loadComponent: () => import('./updated-tasks/updated-tasks.page').then( m => m.UpdatedTasksPage)
   },
 ];
