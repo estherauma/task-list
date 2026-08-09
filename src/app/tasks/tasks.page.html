@@ -16,9 +16,14 @@
     </ion-card-header>
     <ion-card-content>
       <div class="add-task-button">
-        <ion-button color="primary">
+        <ion-button color="primary" (click) ="isModalOpen = true">
           + Add Task
         </ion-button>
+        <ion-modal [isOpen]="isModalOpen">
+          <ng-template>
+            <app-add-task-modal></app-add-task-modal>
+          </ng-template>
+        </ion-modal>
       </div>
       <table>
         <thead>
