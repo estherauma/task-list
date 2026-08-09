@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Updated Tasks</ion-title>
+    <ion-title>Tasks</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Updated Tasks</ion-title>
+      <ion-title size="large">Tasks</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-card>
@@ -15,35 +15,61 @@
       <ion-card-title>My Tasks</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <div class="add-task-button">
+        <ion-button color="primary" routerLink="/add-task">
+          + Add Task
+        </ion-button>
+      </div>
       <table>
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
 
-    <tbody>
-      <tr>
-        <td>Learn Angular</td>
-        <td>Pending</td>
-        <td>
-          <ion-button>Edit</ion-button>
-          <ion-button color="danger">Delete</ion-button>
-        </td>
-      </tr>
+        <tbody>
+          <tr>
+            <td>Learn Angular</td>
+            <td>Learn Angular description</td>
+            <td>2024-06-30</td>
+            <td>High</td>
+            <td>Pending</td>
+            <td>
+              <ion-button routerLink="/add-task">Edit</ion-button>
+              <ion-button color="danger">Delete</ion-button>
+            </td>
+          </tr>
 
-      <tr>
-        <td>Learn Ionic</td>
-        <td>Completed</td>
-        <td>
-          <ion-button>Edit</ion-button>
-          <ion-button color="danger" routerLink="/tasks">Delete</ion-button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <tr>
+            <td>Attend standup meeting</td>
+            <td>Attend standup meeting description</td>
+            <td>2026-08-03</td>
+            <td>Medium</td>
+            <td>Completed</td>
+            <td>
+              <ion-button routerLink="/add-task">Edit</ion-button>
+              <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Learn Ionic</td>
+            <td>Learn Ionic description</td>
+            <td>2024-07-15</td>
+            <td>Medium</td>
+            <td>In Progress</td>
+            <td>
+              <ion-button routerLink="/add-task">Edit</ion-button>
+              <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Task</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Add a new task</ion-card-title>
+      <ion-card-subtitle>Fill out the form below to add a new task</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-input label="Name" labelPlacement="floating" placeholder="Enter task name"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-input label="Description" labelPlacement="floating" placeholder="Enter task description"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-input label="Due Date" labelPlacement="floating" placeholder="Enter due date"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-input label="Priority" labelPlacement="floating" placeholder="Enter priority"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-input label="Status" labelPlacement="floating" placeholder="Enter status"></ion-input>
+        </ion-item>
+
+        <ion-button routerLink="/tasks">
+          Save Task
+        </ion-button>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
