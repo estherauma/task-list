@@ -42,7 +42,7 @@
               <td>Pending</td>
               <td>
                 <ion-button routerLink="/add-task">Edit</ion-button>
-                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+                <ion-button color="danger" (click)="deleteTask()">Delete</ion-button>
               </td>
             </tr>
 
@@ -54,7 +54,7 @@
               <td>Completed</td>
               <td>
                 <ion-button routerLink="/add-task">Edit</ion-button>
-                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+                <ion-button color="danger" (click)="deleteTask()" routerLink="/updated-tasks">Delete</ion-button>
               </td>
             </tr>
 
@@ -66,7 +66,7 @@
               <td>In Progress</td>
               <td>
                 <ion-button routerLink="/add-task">Edit</ion-button>
-                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+                <ion-button color="danger" (click)="deleteTask()" routerLink="/updated-tasks">Delete</ion-button>
               </td>
             </tr>
             <tr>
@@ -77,7 +77,7 @@
               <td>Pending</td>
               <td>
                 <ion-button routerLink="/add-task">Edit</ion-button>
-                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+                <ion-button color="danger" (click)="deleteTask()" routerLink="/updated-tasks">Delete</ion-button>
               </td>
             </tr>
           </tbody>

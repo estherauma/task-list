@@ -5,7 +5,7 @@ import {
   IonContent, IonHeader, IonTitle, IonToolbar,
   IonInput,IonItem,IonButton,IonCard,IonCardHeader,IonCardTitle,
   IonCardContent,IonCardSubtitle,IonSelect,IonSelectOption,
-  IonDatetime,IonModal,IonText,IonLabel } from '@ionic/angular/standalone';
+  IonDatetime,IonModal,IonText,IonLabel,ToastController } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-add-task',
@@ -16,14 +16,15 @@ import { RouterLink } from '@angular/router';
     IonContent, IonHeader, IonTitle, IonToolbar, 
     IonInput, IonItem, IonButton, IonCard, IonCardHeader, 
     IonCardTitle, IonCardContent, IonCardSubtitle, IonSelect, 
-    IonSelectOption, IonDatetime, IonModal, IonText, IonLabel, CommonModule, FormsModule, RouterLink]
+    IonSelectOption, IonDatetime, IonModal, IonText, IonLabel,
+     CommonModule, FormsModule, RouterLink]
 })
 export class AddTaskPage implements OnInit {
 
   isDatePickerOpen = false;
   selectedDate = '';
 
-  constructor() { }
+  constructor(private toastController: ToastController) { }
 
   ngOnInit() {
   }
@@ -34,6 +35,15 @@ export class AddTaskPage implements OnInit {
 
   closeDatePicker() {
     this.isDatePickerOpen = false;
+  }
+
+  async saveTask() {
+    const toast = await this.toastController.create({
+      message: 'Task saved successfully!',
+      duration: 2000,
+      color: 'success'
+    });
+    toast.present();
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton} from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton,ToastController} from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-tasks',
@@ -11,11 +11,18 @@ import { RouterLink } from '@angular/router';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle,  IonCardContent, IonButton, CommonModule, FormsModule, RouterLink]
 })
 export class TasksPage implements OnInit {
-  constructor() { }
+  constructor(private toastController: ToastController) { }
 
   ngOnInit() {
   }
 
-  
+  async deleteTask() {
+    const toast = await this.toastController.create({
+      message: 'Task deleted successfully!',
+      duration: 2000,
+      color: 'success'
+    });
+    toast.present();
+  }
 
 }
