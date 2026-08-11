@@ -20,67 +20,69 @@
           + Add Task
         </ion-button>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Description</th>
-            <th>Due Date</th>
-            <th>Priority</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Description</th>
+              <th>Due Date</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr>
-            <td>Learn Angular</td>
-            <td>Learn Angular description</td>
-            <td>2024-06-30</td>
-            <td>High</td>
-            <td>Pending</td>
-            <td>
-              <ion-button routerLink="/add-task">Edit</ion-button>
-              <ion-button color="danger">Delete</ion-button>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Learn Angular</td>
+              <td>Learn Angular description</td>
+              <td>2024-06-30</td>
+              <td>High</td>
+              <td>Pending</td>
+              <td>
+                <ion-button routerLink="/add-task">Edit</ion-button>
+                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+              </td>
+            </tr>
 
-          <tr>
-            <td>Attend standup meeting</td>
-            <td>Attend standup meeting description</td>
-            <td>2026-08-03</td>
-            <td>Medium</td>
-            <td>Completed</td>
-            <td>
-              <ion-button routerLink="/add-task">Edit</ion-button>
-              <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
-            </td>
-          </tr>
+            <tr>
+              <td>Attend standup meeting</td>
+              <td>Attend standup meeting description</td>
+              <td>2026-08-03</td>
+              <td>Medium</td>
+              <td>Completed</td>
+              <td>
+                <ion-button routerLink="/add-task">Edit</ion-button>
+                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+              </td>
+            </tr>
 
-          <tr>
-            <td>Learn Ionic</td>
-            <td>Learn Ionic description</td>
-            <td>2024-07-15</td>
-            <td>Medium</td>
-            <td>In Progress</td>
-            <td>
-              <ion-button routerLink="/add-task">Edit</ion-button>
-              <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
-            </td>
-          </tr>
-          <tr>
-            <td>Learn TypeScript</td>
-            <td>Learn TypeScript description</td>
-            <td>2026-08-20</td>
-            <td>Low</td>
-            <td>Pending</td>
-            <td>
-              <ion-button routerLink="/add-task">Edit</ion-button>
-              <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <td>Learn Ionic</td>
+              <td>Learn Ionic description</td>
+              <td>2024-07-15</td>
+              <td>Medium</td>
+              <td>In Progress</td>
+              <td>
+                <ion-button routerLink="/add-task">Edit</ion-button>
+                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+              </td>
+            </tr>
+            <tr>
+              <td>Learn TypeScript</td>
+              <td>Learn TypeScript description</td>
+              <td>2026-08-20</td>
+              <td>Low</td>
+              <td>Pending</td>
+              <td>
+                <ion-button routerLink="/add-task">Edit</ion-button>
+                <ion-button color="danger" routerLink="/updated-tasks">Delete</ion-button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>

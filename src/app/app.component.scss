@@ -117,3 +117,26 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.date-picker-modal {
+  --width: 90%;
+  --max-width: 400px;
+  --height: auto;
+  --max-height: 90%;
+  --border-radius: 16px;
+}
+
+.date-picker-modal ion-content {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+.date-picker-modal ion-datetime {
+  width: 90%;
+}
+
+.date-picker-modal ion-button {
+  margin-top: 16px;
+}
