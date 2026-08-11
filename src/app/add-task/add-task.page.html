@@ -16,11 +16,23 @@
 
       <form>
         <ion-item fill="outline" class="ion-margin-bottom">
-          <ion-input label="Name" labelPlacement="floating" placeholder="Enter task name"></ion-input>
+          <ion-input
+          label="Name"
+          labelPlacement="floating"
+          placeholder="Enter task name"
+          [(ngModel)]="task.title"
+          name="title">
+        </ion-input>
         </ion-item>
 
         <ion-item fill="outline" class="ion-margin-bottom">
-          <ion-input label="Description" labelPlacement="floating" placeholder="Enter task description"></ion-input>
+          <ion-input
+            label="Description"
+            labelPlacement="floating"
+            placeholder="Enter task description"
+            [(ngModel)]="task.description"
+            name="description">
+          </ion-input>
         </ion-item>
 
         <ion-item
@@ -39,18 +51,32 @@
         </ion-item>
 
         <ion-item fill="outline" class="ion-margin-bottom">
-          <ion-select label="Priority" labelPlacement="floating" placeholder="Select priority">
-            <ion-select-option value="low">Low</ion-select-option>
-            <ion-select-option value="medium">Medium</ion-select-option>
-            <ion-select-option value="high">High</ion-select-option>
+          <ion-select
+            label="Priority"
+            labelPlacement="floating"
+            placeholder="Select priority"
+            [(ngModel)]="task.priority"
+            name="priority">
+
+            <ion-select-option value="Low">Low</ion-select-option>
+            <ion-select-option value="Medium">Medium</ion-select-option>
+            <ion-select-option value="High">High</ion-select-option>
+
           </ion-select>
         </ion-item>
 
         <ion-item fill="outline" class="ion-margin-bottom">
-          <ion-select label="Status" labelPlacement="floating" placeholder="Select status">
-            <ion-select-option value="not-started">Not Started</ion-select-option>
-            <ion-select-option value="in-progress">In Progress</ion-select-option>
-            <ion-select-option value="completed">Completed</ion-select-option>
+          <ion-select
+            label="Status"
+            labelPlacement="floating"
+            placeholder="Select status"
+            [(ngModel)]="task.status"
+            name="status">
+
+            <ion-select-option value="Not Started">Not Started</ion-select-option>
+            <ion-select-option value="In Progress">In Progress</ion-select-option>
+            <ion-select-option value="Completed">Completed</ion-select-option>
+
           </ion-select>
         </ion-item>
 
